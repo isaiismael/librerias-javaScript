@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #contador {
+            width: 50%;
+            display: flex;
+            flex-wrap: wrap;
+            margin: auto;
+        }
+
+        .simply-section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 60px;
+            width: 100px;
+            height: 100px;
+            background: red;
+            margin: 10px;
+            color: white;
+        }
+
+        .simply-section div {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .simply-word {
+            font-size: 20px;
+        }
+
+        p {
+            font-size: 18px;
+            padding: 20px;
+        }
+
+        .contenido {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="contador">
+
+    </div>
+
+    <section class="contenido">
+        <p>Lorem ipon natus corrupti architecto sunt accusantium perspiciatis voluptas modi quam tempm consequatur ea
+            laudantium, reiciendis nisi, molestias quibusdam eveniet
+            maxime corrupti dolorem magni minima commodi quae sunt quo cumque at ducimus in. Itaque tempore voluptate
+            labore accusantium quasi laboriosam temporibus cupiditate, molestiae nobis et? Cumque doloribus minima modi
+            quisquam obcaecati, qui animi id est at eos maiores vitae impedit,
+            consequatur modi aut facere. Et repellat magnam nemo minus quam ullam cum labore dicta facere sequi eligendi
+            id, assumenda deserunt recusandae nobis, adipisci eaque, quia voluptates ratione sed corporis totam esse?
+            Blanditiis iusto nihil a quas, cum earum culpa. Maxime laboriosam soluta eaque aperiam vero vitae fugiat
+            iusto debitis, unde voluptas id alias aliquid sit ratione accusantium qui aut ex necessitatibus repellendus
+            eum voluptates. Voluptate dolorum ipsam culpa aspernatur adipisci. Deleniti autem in soluta molestiae
+            architecto provident quos? Corporis veritatis quae similique repellat cupiditate architecto quas, eius
+            tempore numquam laboriosam quo? Voluptatum dolorem, beatae sed accusantium sequi voluptas tempore omnis
+            debitis laborum non fugiat esse eligendi enim autem fuga maiores sint dicta, ipsa quisquam quia itaque
+            libero fugit. Natus ipsam odio quae beatae dignissimos optio quis architecto molestiae ex, ut atque illum
+            perspiciatis repudiandae fuga tempore! Adipisci accusantium nulla maiores minima similique iure illum, eaque
+            mollitia earum fugit sequi aliquam eius quos placeat quibusdam in exercitationem, accusamus sit dolor
+            inventore quidem, rem voluptas unde. Excepturi sint quidem, harum labore laudantium nobis quasi assumenda
+            rerum architecto, cumque tenetur maxime quo, eos iure esse ea aspernatur ipsam at vero sit culpa molestiae
+            ut modi voluptatem! Voluptatem est tenetur aperiam natus, aliquam officiis alias repellendus ab
+            exercitationem perferendis illum expedita minus laboriosam id inventore molestiae? deleniti recusandae?
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium, harum, nihil voluptates recusandae
+            voluptatum ducimus eum sequi illum minus inventore obcaecati dolorum veniam error odit. Perferendis
+            molestiae delectus pariatur natus?</p>
+    </section>
+
+    <script src="js/simplyCountdown.min.js"></script>
+    <script>
+        simplyCountdown('#contador', {
+            year: 2021, // required
+            month: 1, // required
+            day: 21, // required
+            hours: 1, // Default is 0 [0-23] integer
+            minutes: 12, // Default is 0 [0-59] integer
+            seconds: 30, // Default is 0 [0-59] integer
+            words: { //words displayed into the countdown
+                days: 'dia',
+                hours: 'hora',
+                minutes: 'minuto',
+                seconds: 'segundo',
+                pluralLetter: 's'
+            },
+            plural: true, //use plurals
+            inline: false, //set to true to get an inline basic countdown like : 24 days, 4 hours, 2 minutes, 5 seconds
+            inlineClass: 'simply-countdown-inline', //inline css span class in case of inline = true
+            // in case of inline set to false
+            enableUtc: false,
+            onEnd: function () {
+                /* function cuando finalize */
+                let con = document.querySelector(".contenido");
+                con.style.display = "block";
+                return;
+            },
+            refresh: 1000, //default refresh every 1s
+            sectionClass: 'simply-section', //section css class
+            amountClass: 'simply-amount', // amount css class
+            wordClass: 'simply-word', // word css class
+            zeroPad: false,
+            countUp: false, // enable count up if set to true
+        });
+    </script>
+</body>
+
+</html>

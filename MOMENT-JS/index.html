@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moment js</title>
+</head>
+
+<body>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js" integrity="sha512-rmZcZsyhe0/MAjquhTgiUcb4d9knaFc7b5xAfju483gbEXTkeJRUMIPk6s3ySZMYUHEcjKbjLjyddGWMrNEvZg==" crossorigin="anonymous"></script>
+
+    <script>
+        const ayer = moment('1999-02-02 14:00:00.000');
+        const hoy = moment('2021-01-20 08:40:00.000');
+        //          DD-MD-Y    d-m-y
+        //          HH:MM:SS   hh-mm-ss
+
+        console.log("**********restas de fechas**********");
+        console.log(hoy.diff(ayer, 'days')+" dias")
+        console.log(hoy.diff(ayer, 'months')+" meses");
+        console.log(hoy.diff(ayer, 'years')+" años");
+        console.log(hoy.diff(ayer, 'hours')+" horas");
+        console.log(hoy.diff(ayer, 'minutes')+" minutos");
+        console.log(hoy.diff(ayer, 'seconds')+" segundos");
+        console.log(hoy.diff(ayer, 'milliseconds')+" mili segundos");
+
+        console.log("*********sumas de fechas*********");
+        console.log(moment(hoy.add(7, 'days')._d).format('DD-MM-YYYY hh:mm:ss'))
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/glider.min.css">
+    <style>
+        body{
+            padding: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="glider-contain">
+        <div class="glider">
+            <div><img src="https://placeimg.com/640/480/animals" alt=""></div>
+            <div><img src="https://placeimg.com/640/480/arch" alt=""></div>
+            <div><img src="https://placeimg.com/640/480/nature" alt=""></div>
+            <div><img src="https://placeimg.com/640/480/people" alt=""></div>
+            <div><img src="https://placeimg.com/640/480/animals" alt=""></div>
+            <div><img src="https://placeimg.com/640/480/arch" alt=""></div>
+            <div><img src="https://placeimg.com/640/480/nature" alt=""></div>
+            <div><img src="https://placeimg.com/640/480/people" alt=""></div>
+        </div>
+
+        <button aria-label="Previous" class="glider-prev">«</button>
+        <button aria-label="Next" class="glider-next">»</button>
+        <div role="tablist" class="dots"></div>
+    </div>
+    <script src="js/glider.min.js"></script>
+    <script>
+        new Glider(document.querySelector('.glider'), {
+            slidesToShow: 5,
+            slidesToScroll: 1,
+            draggable: true,
+            dots: '.dots',
+            arrows: {
+                prev: '.glider-prev',
+                next: '.glider-next'
+            }
+        });
+    </script>
+</body>
+
+</html>
